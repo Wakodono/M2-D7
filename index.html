@@ -16,34 +16,44 @@
 
   <head>
     <style>
-      /*
-            EX1) Write a selector to target the h1 in jumbotron (done)
-            EX2) Write a selector to target every child of the navbar (done)
-            EX3) Write a selector to target the "continue reading..." inside the jumbotron (done)
-            EX4) Write a selector to target the first blogpost (done)
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
-        */
-    div .jumbotron h1{
-        background-color: rgb(3, 63, 3);
-    }
+      
+            /* EX1) Write a selector to target the h1 in jumbotron (done) */
+            div .jumbotron h1{
+                        background-color: rgb(3, 63, 3);
+             }
+            /* EX2) Write a selector to target every child of the navbar (done) */
+            .blog-header,
+            .nav-scroller{
+                color: rgb(18, 3, 148);
+            }
+            /* EX3) Write a selector to target the "continue reading..." inside the jumbotron (done) */
+            div.jumbotron a.text-white.font-weight-bold{
+                background-color: grey;
+            }
+            /* EX4) Write a selector to target the first blogpost (stuck) */
+            /* EX5) Write a selector to target the "even" links in the navbar (done) */
+            nav.nav.d-flex a{
+                background-color: rgb(235, 235, 235);
+            }
+            /* EX6) Write a selector to target the last blog post (stuck) */
+            /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
+            div.p4 h4.font-italic ol.list-unstyled {
+                background-color: rgb(54, 53, 53);
+            }
+            /* EX8) Write a selector to target the second post author */
+            a[class~="Jacob"] {
+                color: rgb(253, 180, 192);
+}
+            /* EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly (stuck)*/ 
+            
+            /* EX10) Write a selector to target the footer */
+            .blog-footer{
+                background-color: rgb(68, 68, 68);
+            }
 
-    .blog-header,
-    .nav-scroller{
-        color: rgb(18, 3, 148);
-    }
+    
+   
 
-    div.jumbotron a.text-white.font-weight-bold{
-        background-color: grey;
-    }
-
-    div.blog-post:first-of-type{
-        color: indianred;
-    }
     </style>
     <meta charset="utf-8" />
     <meta
@@ -461,6 +471,7 @@
       /*
         JS Exercises
         EX11) Write a function to add a new link into the navbar
+        
         EX12) Write a function to change the color of the main title
         EX13) Write a function to change the background of the jumbotron
         EX14) Write a function to remove all the links under "Elsewhere"
