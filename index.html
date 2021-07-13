@@ -41,8 +41,8 @@
             div.blog-post:last-of-type{
                 background-color: brown;
             /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
-            aside div.p4 h4.font-italic ol.list-unstyled {
-                background-color: rgb(54, 53, 53);
+             div h4  ol {
+                background-color: 
             }
             /* EX8) Write a selector to target the second post author */
             a[class~="Jacob"] {
@@ -480,16 +480,37 @@
             let newLink = document.createElement("p-2 text-muted")
             nav.appendChild(newLink)
         }
-      /*  EX12) Write a function to change the color of the main title
-        EX13) Write a function to change the background of the jumbotron
-        EX14) Write a function to remove all the links under "Elsewhere"
-        EX15) Write a function to change the column size for heading in jumbotron
+        // EX12) Write a function to change the color of the main title
+      changeTitle = function(){
+          let mainTitle = document.querySelector("title")
+          let changeTitleColor = mainTitle.style.color = "blue"
+      }
+        // EX13) Write a function to change the background of the jumbotron
+       jumbotron = function(){
+           let getJumbotron = document.querySelector("jumbotron")
+            let jumbotronBackground = getJumbotron.style.backgroundColor = "pink"
+       }
+    //    EX14) Write a function to remove all the links under "Elsewhere"
+       removeLinksElsewhere = function(){
+           let getLinks = document.querySelectorAll("div.p-4, h4.font-italic, ol.list-unstyled, a")
+           deleteLinks = getLinks.remove()
+        /* EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
         EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+
+    }
+    /* <div class="p-4">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div> */
 
     </script>
   </body>
