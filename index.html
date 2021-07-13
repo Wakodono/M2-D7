@@ -22,22 +22,26 @@
                         background-color: rgb(3, 63, 3);
              }
             /* EX2) Write a selector to target every child of the navbar (done) */
-            .blog-header,
-            .nav-scroller{
+            .blog-header .nav-scroller{
                 color: rgb(18, 3, 148);
             }
             /* EX3) Write a selector to target the "continue reading..." inside the jumbotron (done) */
             div.jumbotron a.text-white.font-weight-bold{
                 background-color: grey;
             }
-            /* EX4) Write a selector to target the first blogpost (stuck) */
+            /* EX4) Write a selector to target the first blogpost (done) */
+            div.blog-post:first-of-type{
+                background-color: hotpink;
+            }
             /* EX5) Write a selector to target the "even" links in the navbar (done) */
             nav.nav.d-flex a{
                 background-color: rgb(235, 235, 235);
             }
-            /* EX6) Write a selector to target the last blog post (stuck) */
+            /* EX6) Write a selector to target the last blog post (done) */
+            div.blog-post:last-of-type{
+                background-color: brown;
             /* EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives ) */
-            div.p4 h4.font-italic ol.list-unstyled {
+            aside div.p4 h4.font-italic ol.list-unstyled {
                 background-color: rgb(54, 53, 53);
             }
             /* EX8) Write a selector to target the second post author */
@@ -468,11 +472,15 @@
     </footer>
 
     <script>
-      /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        
-        EX12) Write a function to change the color of the main title
+      
+        // JS Exercises
+        // EX11) Write a function to add a new link into the navbar
+        navbarLink = function(){
+            let nav = document.querySelector(".nav-scroller")
+            let newLink = document.createElement("p-2 text-muted")
+            nav.appendChild(newLink)
+        }
+      /*  EX12) Write a function to change the color of the main title
         EX13) Write a function to change the background of the jumbotron
         EX14) Write a function to remove all the links under "Elsewhere"
         EX15) Write a function to change the column size for heading in jumbotron
@@ -482,6 +490,7 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+
     </script>
   </body>
 </html>
